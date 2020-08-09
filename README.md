@@ -8,4 +8,6 @@ A quick custom webapp extension of the Desmos graphing calculator API, adding a 
 * Sliders to adjust the x and y graph scale indpendently, a feature on the mobile app version that's missing from the desktop site.
 * hidden feature: the Reverse Contrast option in the calculator will invert the custom control colors as well.
 
-Features a scalable flexbox ui framework, to facilitate use on mobile.
+Features a responsive flexbox UI, to facilitate use on mobile.
+
+This app uses the default developer Desmos API key, so don't go distributing this around your office/classroom before swapping that out. I made this mostly for my personal use, so any issues you come across are not my responsibility, use at your own risk, etc.
