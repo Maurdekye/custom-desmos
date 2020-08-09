@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Desmos</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <div class="controlrow">
+        <div class="halfcontrol">
+          <input id="xscale" type="range" min="-100" max="100" value="0">
+        </div>
+        <div class="halfcontrol">
+          <input id="yscale" type="range" min="-100" max="100" value="0">
+        </div>
+      </div>
+      <div class="controlrow">
+        <div class="halfcontrol">
+          <input id="generate_latex" type="button" value="Generate LaTeX">
+        </div>
+        <div class="halfcontrol">
+          <input id="copy" type="button" value="Copy to Clipboard">
+        </div>
+      </div>
+      <div class="controlrow">
+        <div class="halfcontrol">
+          <input id="read" type="button" value="Read Expressions into Calculator">
+        </div>
+        <div class="halfcontrol">
+          <input id="clear" type="button" value="Clear Expressions">
+        </div>
+      </div>
+      <div class="control">
+        <label id="add_align_label">
+          <input id="add_align_formatting" type="checkbox" checked>
+          Format latex as <tt>{align}</tt> block
+        </label>
+      </div>
+      <div class="control">
+        <label id="add_flalign_label">
+          <input id="add_flalign_formatting" type="checkbox">
+          Format latex as <tt>{flalign}</tt> block
+        </label>
+      </div>
+      <div class="control">
+        <label id="add_asterisk_label">
+          <input id="add_asterisk" type="checkbox" checked>
+          <tt>{align*}</tt> instead of <tt>{align}</tt>?
+        </label>
+      </div>
+      <div class="controlrow">
+        <div class="optioncontrol">
+          <label id="indent_label">
+            <input id="indent" type="number" value="4" min="1" step="1">
+            space indent
+          </label>
+        </div>
+        <div class="optioncontrol">
+          <label id="disable_graph_label">
+            <input id="disable_graph" type="checkbox">
+            Disable graph paper?
+          </label>
+        </div>
+      </div>
+      <div class="latexout">
+        <textarea id="latex_out"></textarea>
+      </div>
+    </div>
+    <div id="calculator" class="calculator"></div>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>

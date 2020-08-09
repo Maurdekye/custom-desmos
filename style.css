@@ -1,0 +1,50 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+}
+.controls {
+  flex: 3;
+  display: flex;
+  flex-flow: column;
+}
+.controlrow input[type="button"], .controlrow input[type="range"] {
+  width: 100%;
+  height: 40px;
+}
+.control input {
+  margin: 10px 10px;
+}
+.controlrow {
+  display: flex;
+  flex-flow: row;
+}
+.optioncontrol {
+  flex: 1;
+  margin: 10px 10px;
+}
+.halfcontrol {
+  flex: 1;
+}
+.latexout {
+  flex: 1;
+}
+.calculator {
+  flex: 10;
+}
+#latex_out {
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+#indent {
+  width: 35px;
+}
