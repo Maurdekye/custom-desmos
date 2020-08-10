@@ -79,8 +79,8 @@ window.onload = () => {
     var flalign_format = $("#add_flalign_formatting").checked;
     var add_asterisk = $("#add_asterisk").checked;
     var indent = Number($("#indent").value);
-  
-    var raw_latex = calculator.getExpressions().map(e => e.latex);
+
+    var raw_latex = calculator.getExpressions().filter(e => e.type === "expression").map(e => e.latex);
     var final_text = "";
     
     if (align_format || flalign_format) {
