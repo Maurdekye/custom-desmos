@@ -95,8 +95,13 @@ window.onload = () => {
 
       var blocks = groups.map(grp => {
         var exprs = grp.map(latex => {
-          var eqsign = latex.lastIndexOf("=")+1;
-          latex = " ".repeat(indent) + latex.slice(0, eqsign) + "&" + latex.slice(eqsign);
+          var align_location = latex.lastIndexOf("=");
+          if (align_location === -1) 
+            align_location = latex.lastIndexOf("<");
+          if (align_location === -1) 
+            align_location = latex.lastIndexOf(">");
+          align_location += 1;
+          latex = " ".repeat(indent) + latex.slice(0, align_location) + "&" + latex.slice(align_location);
           if (flalign_format) {
             return latex + "&\\\\";
           } else {
