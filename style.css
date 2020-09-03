@@ -10,6 +10,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-flow: row;
+  flex-wrap: wrap;
 }
 .controls {
   flex: 3;
@@ -39,6 +40,8 @@ html, body {
 }
 .calculator {
   flex: 10;
+  min-width: 400px;
+  min-height: 300px;
 }
 #latex_out {
   resize: none;
